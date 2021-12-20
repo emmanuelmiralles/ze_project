@@ -3,8 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import numpy as np
 import joblib
-import ast
-import copy
+
 
 app = FastAPI()
 
