@@ -17,14 +17,14 @@ app.add_middleware(
 )
 @app.get("/")
 def index():
-    return {"greeting": "Hello world"}
+    return {"desole": "pas de loyer"}
 @app.get("/predict")
-def predict(GrLivArea, RoofSurface):
+def predict(surfa, surfb):
     model=joblib.load('../model.joblib')
     X = pd.DataFrame(
         {
-            'GrLivArea':GrLivArea,
-            'RoofSurface':RoofSurface
+            'GrLivArea':int(surfa),
+            'RoofSurface':int(surfb)
         },index=[0])
     y_pred=model.predict(X)
     return {'prediction':y_pred[0]}
