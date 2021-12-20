@@ -20,7 +20,7 @@ def index():
     return {"desole": "pas de loyer"}
 @app.get("/predict")
 def predict(surfa, surfb):
-    model=joblib.load('../model.joblib')
+    model=joblib.load('model.joblib')
     X = pd.DataFrame(
         {
             'GrLivArea':int(surfa),
