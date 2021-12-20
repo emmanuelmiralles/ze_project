@@ -24,6 +24,9 @@ s3fs
 fastapi
 uvicorn
 
+# Front
+streamlit
+
 # utilities
 six>=1.14
 joblib
